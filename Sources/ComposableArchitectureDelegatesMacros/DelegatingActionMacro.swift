@@ -53,7 +53,7 @@ public struct DelegatingActionMacro: ExtensionMacro, MemberMacro {
         }
 
         let decl: DeclSyntax = """
-            public var _delegateAction: \(delegateActionType.trimmed)? {
+            public var delegateAction: \(delegateActionType.trimmed)? {
                 guard case .delegate(let action) = self else { return nil }
                 return action
             }

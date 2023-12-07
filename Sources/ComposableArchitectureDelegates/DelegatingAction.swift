@@ -9,5 +9,5 @@ public protocol DelegatingAction {
 
 @attached(extension, conformances: DelegatingAction)
 @attached(member, names: named(delegateAction))
-public macro ActionWithDelegate() =
+public macro DelegatingAction() =
     #externalMacro(module: "ComposableArchitectureDelegatesMacros", type: "DelegatingActionMacro")
